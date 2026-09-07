@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitalis</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<a href="artigos.html">Artigos</a>
+<a href="setores.html">Setores</a>
+<a href="sobre.html">Sobre</a>
+</nav>
+
+<div class="logo">Vitalis</div>
+
+<nav>
+<a href="#">Buscar</a>
+<a href="#">Conta</a>
+</nav>
+</header>
+
+
+<section class="hero-slider">
+
+  <!--   VICARICÍDIO -->
+  <div class="hero-slide active">
+    <div class="hero-bg vicaricidio-bg"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Abril • Atualidade</div>
+      <h1>Vicaricídio:<br>violência que atinge pela dor.</h1>
+      <p>Entenda o crime que utiliza terceiros para atingir mulheres emocionalmente.</p>
+      <a href="artigoEventos3.html" class="hero-btn">Leia a matéria</a>
+    </div>
+  </div>
+
+  <!-- FEMINICÍDIO -->
+  <div class="hero-slide">
+    <div class="hero-bg fem-bg"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Abril • Tema Atual</div>
+      <h1>Feminicídio:<br>informação salva vidas.</h1>
+      <p>Entenda sinais, redes de apoio e como a conscientização pode proteger mulheres.</p>
+      <a href="artigoCultura4.html" class="hero-btn">Leia a matéria</a>
+    </div>
+  </div>
+
+  <!-- EDIÇÃO -->
+  <div class="hero-slide">
+    <div class="hero-bg edition-bg"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Nova Edição</div>
+      <h1>Segunda edição<br>da Vitalis.</h1>
+      <p>Mais lifestyle, bem-estar, cultura e assuntos que impactam a juventude.</p>
+      <a href="edicaoAbril.html" class="hero-btn">Ver edição</a>
+    </div>
+  </div>
+
+  <!-- dots -->
+  <div class="hero-dots">
+    <span class="hero-dot active"></span>
+    <span class="hero-dot"></span>
+    <span class="hero-dot"></span>
+  </div>
+
+</section>
+
+<script>
+const slides = document.querySelectorAll(".hero-slide");
+const dots = document.querySelectorAll(".hero-dot");
+let current = 0;
+let autoSlide = setInterval(nextSlide, 5000);
+
+function showSlide(index){
+  if(index < 0){
+    index = slides.length - 1;
+  }
+
+  if(index >= slides.length){
+    index = 0;
+  }
+
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
+
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+  current = index;
+}
+
+function nextSlide(){
+  showSlide(current + 1);
+}
+
+function resetAutoSlide(){
+  clearInterval(autoSlide);
+  autoSlide = setInterval(nextSlide, 5000);
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    showSlide(index);
+    resetAutoSlide();
+  });
+});
+</script>
+
+<section class="editorial-section">
+
+  <div class="editorial-head">
+    <h2>Destaques da Semana</h2>
+    <p>Conteúdo pensado para transformar sua rotina.</p>
+  </div>
+
+  <div class="editorial-grid">
+
+    <!-- ESQUERDA -->
+    <a href="artigoSaude6.html" class="lead-story">
+      <div class="lead-image">
+        <img src="https://centrainfusao.com.br/wp-content/uploads/2022/02/centra.png">
+      </div>
+
+      <div class="lead-info">
+        <span class="eyebrow">BEM-ESTAR</span>
+
+        <h3>Saude Ginecológica</h3><br>
+
+        <p>Equilíbrio, qualidade e bem-estar no seu dia a dia.</p>
+
+        <small>Por Equipe Vitalis</small>
+      </div>
+    </a>
+
+    <!-- DIREITA -->
+    <aside class="trending-column">
+
+      <h3 class="trend-heading"><span>//</span> TRENDING NOW</h3>
+
+      <div class="trend-list">
+
+        <a href="artigoBemEstar1.html" class="trend-item">
+          <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80">
+          <span>ALIMENTAÇÃO</span>
+          <h4>Alimentação Saudável</h4>
+        </a>
+
+        <a href="artigoBemEstar2.html" class="trend-item">
+          <img src="https://draanabeatriz.com.br/wp-content/uploads/2024/05/mental-health-concept-2023-11-27-05-02-03-utc-1-scaled.jpg">
+          <span>BEM-ESTAR</span>
+          <h4>Bem-estar: Saúde Mental</h4>
+        </a>
+
+        <a href="artigoCultura1.html" class="trend-item">
+          <img src="https://rollingstone.com.br/wp-content/uploads/2025/01/seu-jorge-cantor-show-salvador-concha-acustica-foto-divulgacao.jpg">
+          <span>CULTURA</span>
+          <h4>Show do cantor Jorge em São Paulo</h4>
+        </a>
+
+        <a href="artigoBemEstar5.html" class="trend-item">
+          <img src="https://blog.gntech.med.br/wp-content/uploads/2023/04/janeiro-branco-1024x683.webp">
+          <span>BEM-ESTAR</span>
+          <h4>Janeiro Branco</h4>
+        </a>
+
+        <a href="artigoBemEstar3.html" class="trend-item">
+          <img src="https://midias.correio24horas.com.br/2025/02/21/edicasefortalecer-a-autoestima-e-uma-estrategia-para-criar-uma-relacao-mais-verdadeira-com-consigo-imagem-blueastro--shutterstock--uuztdfym.jpg">
+          <span>ESTILO</span>
+          <h4>Aparência Física</h4>
+        </a>
+
+        <a href="artigoBemEstar4.html" class="trend-item">
+          <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80">
+          <span>BEM-ESTAR</span>
+          <h4>Carnaval e bem-estar</h4>
+        </a>
+
+        <a href="artigoSaude2.html" class="trend-item">
+          <img src="https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?auto=format&fit=crop&w=800&q=80">
+          <span>SAÚDE</span>
+          <h4>Dia Mundial do Coração</h4>
+        </a>
+
+        <a href="artigoSaude5.html" class="trend-item">
+          <img src="https://institutoana.com.br/wp-content/uploads/2024/02/14-Conheca-os-principais-metodos-contraceptivos.jpg">
+          <span>SAÚDE</span>
+          <h4>Métodos Contraceptivos</h4>
+        </a>
+
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+  </div>
+
+  <!-- BANNER -->
+  <section class="full-banner">
+    <div class="banner-content">
+      <span>NOVA EDIÇÃO</span>
+      <h3>Violência contra a mulher: informação que protege</h3>
+<p>Entender, denunciar e acolher são passos essenciais no combate ao feminicídio e ao machismo estrutural.</p>
+    </div>
+  </section>
+
+</section>
+
+
+
+
+
+
+
+<section class="content-section">
+<h2 class="title">Explore Categorias</h2>
+<p class="subtitle">Navegue pela sua próxima fase.</p>
+
+<div class="categories">
+<a href="saude.html" class="cat c1">Saúde</a>
+<a href="eventos.html" class="cat c2">Eventos</a>
+<a href="bem-estar.html" class="cat c3">Bem-estar</a>
+<a href="cultura.html" class="cat c4">Cultura</a>
+</div>
+</section>
+
+
+<section class="content-section">
+  <h2 class="title">Recomendados para você</h2>
+  <p class="subtitle">Histórias, reflexões e tendências para sua rotina.</p>
+
+  <div class="mosaic-grid">
+
+    <a href="artigoBemEstar2.html" class="mosaic-card large mental">
+      <div class="overlay">
+        <span>Bem-estar</span>
+        <h3>Saúde Mental: como cuidar da mente todos os dias</h3>
+      </div>
+    </a>
+
+    <a href="artigoCultura4.html" class="mosaic-card small fem">
+      <div class="overlay">
+        <span>Atualidade</span>
+        <h4>Feminicídio: informação também salva vidas</h4>
+      </div>
+    </a>
+
+    <a href="artigoBemEstar1.html" class="mosaic-card small food">
+      <div class="overlay">
+        <span>Lifestyle</span>
+        <h4>Alimentação Saudável sem complicação</h4>
+      </div>
+    </a>
+
+    <a href="artigoCultura1.html" class="mosaic-card wide show">
+      <div class="overlay">
+        <span>Eventos</span>
+        <h3>Show do cantor Jorge apresenta Lá Baiana em São Paulo</h3>
+      </div>
+    </a>
+
+    <a href="artigoBemEstar5.html" class="mosaic-card small white">
+      <div class="overlay dark">
+        <span>Janeiro Branco</span>
+        <h4>O mês da saúde emocional</h4>
+      </div>
+    </a>
+
+    <a href="artigoBemEstar3.html" class="mosaic-card small look">
+      <div class="overlay">
+        <span>Estilo</span>
+        <h4>Aparência Física e autoestima saudável</h4>
+      </div>
+    </a>
+
+    <a href="artigoBemEstar4.html" class="mosaic-card small carnival">
+      <div class="overlay">
+        <span>Especial</span>
+        <h4>Bem-estar no Carnaval</h4>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer class="footer-premium">
+
+  <div class="footer-top">
+
+    <div class="footer-brand">
+      <h2>Vitalis</h2>
+      <p>Uma revista digital para jovens protagonistas, explorando bem-estar, cultura e sociedade com profundidade.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <a href="#">Início</a>
+      <a href="#">Artigos</a>
+      <a href="#">Categorias</a>
+      <a href="#">Sobre</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Categorias</h4>
+      <a href="#">Saúde</a>
+      <a href="#">Lifestyle</a>
+      <a href="#">Eventos</a>
+      <a href="#">Cultura</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Contato</h4>
+      <a href="#">Instagram</a>
+      <a href="#">Email</a>
+      <a href="#">Parcerias</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Vitalis — Todos os direitos reservados.</p>
+  </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre | Vitalis</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="sobre.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="header-nav">
+      <a href="index.html">Início</a>
+      <a href="artigos.html">Artigos</a>
+      <a href="setores.html">Setores</a>
+    </nav>
+
+    <div class="logo">Vitalis</div>
+
+    <nav class="header-nav">
+      <a href="#">Buscar</a>
+      <a href="#">Conta</a>
+    </nav>
+  </header>
+
+  <section class="sobre-hero">
+    <div class="hero-overlay"></div>
+
+    <div class="sobre-hero-content">
+      <span class="hero-eyebrow">Editorial</span>
+      <h1>Sobre a Vitalis</h1>
+      <p>Uma revista digital criada por jovens para informar, acolher e provocar reflexão.</p>
+    </div>
+  </section>
+
+  <main class="sobre-main">
+
+    <section class="sobre-intro fade-up">
+      <div class="sobre-intro-text">
+        <span class="section-eyebrow">Quem somos</span>
+        <h2>Conteúdo com propósito, estética e consciência</h2>
+        <p>
+          A <strong>Vitalis</strong> é mais do que uma revista digital: é um espaço de conexão,
+          inspiração e transformação. Nascemos com o desejo de produzir conteúdos que façam
+          sentido para o cotidiano jovem, abordando temas como saúde, bem-estar, cultura,
+          autocuidado, comportamento e questões sociais relevantes.
+        </p>
+        <p>
+          Nosso objetivo é comunicar com leveza, mas sem superficialidade. Acreditamos que
+          informação clara, ética e acessível tem poder para ampliar repertórios, fortalecer
+          vozes e incentivar mudanças reais.
+        </p>
+      </div>
+
+      <div class="sobre-intro-image">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Jovens reunidos em ambiente criativo">
+      </div>
+    </section>
+
+    <section class="sobre-values">
+      <div class="value-card fade-up">
+        <span class="card-eyebrow">Missão</span>
+        <h3>Informar com leveza e responsabilidade</h3>
+        <p>Compartilhar conteúdos relevantes que ajudem nossos leitores a refletir, cuidar de si e compreender melhor o mundo ao redor.</p>
+      </div>
+
+      <div class="value-card fade-up">
+        <span class="card-eyebrow">Visão</span>
+        <h3>Ser referência entre revistas digitais jovens</h3>
+        <p>Construir uma identidade editorial forte, contemporânea e confiável, capaz de dialogar com diferentes públicos de forma autêntica.</p>
+      </div>
+
+      <div class="value-card fade-up">
+        <span class="card-eyebrow">Valores</span>
+        <h3>Ética, empatia e compromisso com a verdade</h3>
+        <p>Valorizamos transparência, respeito, escuta, inclusão e a responsabilidade de comunicar assuntos que impactam vidas.</p>
+      </div>
+    </section>
+
+    <section class="sobre-highlight fade-up">
+      <div class="highlight-image">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80" alt="Equipe jovem trabalhando em conjunto">
+      </div>
+
+      <div class="highlight-content">
+        <span class="section-eyebrow">Nossa essência</span>
+        <h2>Na Vitalis, cada matéria é um convite ao cuidado</h2>
+        <p>
+          Cuidado com o corpo, com a mente, com a informação e com a sociedade. Por isso,
+          cada publicação é pensada não apenas para informar, mas para gerar identificação,
+          repertório e diálogo.
+        </p>
+        <p>
+          Queremos que a experiência de leitura seja bonita, envolvente e, acima de tudo,
+          significativa.
+        </p>
+      </div>
+    </section>
+
+    <section class="sobre-quote fade-up">
+      <p>
+        “Mais do que acompanhar tendências, queremos publicar conteúdos que realmente permaneçam.”
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer-premium">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <h2>Vitalis</h2>
+        <p>Uma nova geração de revista digital para jovens protagonistas.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <a href="index.html">Início</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="setores.html">Setores</a>
+        <a href="sobre.html">Sobre</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Categorias</h4>
+        <a href="#">Saúde</a>
+        <a href="#">Bem-estar</a>
+        <a href="#">Eventos</a>
+        <a href="#">Cultura</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Contato</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Email</a>
+        <a href="#">Parcerias</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Vitalis — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const elements = document.querySelectorAll('.fade-up');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,887 @@
+:root{
+  --space:#25344F;
+  --slate:#617891;
+  --tan:#D5B893;
+  --coffee:#6F4D38;
+  --wine:#632024;
+  --light:#f7f5f1;
+  --white:#ffffff;
+  --line:#e8e2d9;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  overflow-x:hidden;
+  scrollbar-width:none;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--light);
+  color:var(--space);
+}
+
+body::-webkit-scrollbar{
+  display:none;
+}
+
+
+.header-dark{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  padding:28px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:20;
+}
+
+.header-dark nav{
+  display:flex;
+  gap:35px;
+}
+
+.header-dark nav a{
+  text-decoration:none;
+  color:var(--white);
+  font-size:14px;
+  letter-spacing:1px;
+  font-weight:500;
+  transition:.3s;
+}
+
+.header-dark nav a:hover{
+  opacity:.7;
+}
+
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  color:var(--white);
+  letter-spacing:2px;
+}
+
+/* HERO */
+
+.artigos-hero{
+  min-height:62vh;
+  display:flex;
+  align-items:flex-end;
+  padding:140px 7% 70px;
+  background:
+    linear-gradient(rgba(37,52,79,.72),rgba(37,52,79,.62)),
+    url('https://fornerialuce.com.br/media/magefan_blog/alimentacao-saudavel.jpg');
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-text{
+  max-width:720px;
+  color:var(--white);
+}
+
+.hero-text span{
+  display:block;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  opacity:.95;
+}
+
+.hero-text h1{
+  font-family:'Playfair Display',serif;
+  font-size:72px;
+  line-height:1.02;
+  margin-bottom:18px;
+}
+
+.hero-text p{
+  font-size:20px;
+  line-height:1.8;
+  max-width:620px;
+}
+
+/* CONTAINER */
+
+.artigos-container{
+  padding:90px 7%;
+}
+
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-bottom:42px;
+}
+
+.filter-btn{
+  border:1px solid rgba(37,52,79,.12);
+  background:var(--white);
+  color:var(--space);
+  padding:13px 22px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.filter-btn:hover{
+  transform:translateY(-2px);
+  border-color:rgba(37,52,79,.25);
+}
+
+.filter-btn.active{
+  background:var(--space);
+  color:var(--white);
+  border-color:var(--space);
+}
+
+
+.grid-artigos{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+  align-items:stretch;
+}
+
+
+.card-artigo{
+  position:relative;
+  min-height:320px;
+  border-radius:24px;
+  overflow:hidden;
+  text-decoration:none;
+  display:flex;
+  align-items:flex-end;
+  background:var(--white);
+  box-shadow:0 12px 28px rgba(0,0,0,.06);
+  transition:.35s ease;
+}
+
+.card-artigo:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 36px rgba(0,0,0,.12);
+}
+
+.card-artigo img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card-artigo::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(12,18,30,.78), rgba(12,18,30,.16));
+  z-index:1;
+}
+
+.card-artigo .overlay{
+  position:relative;
+  z-index:2;
+  padding:24px;
+  width:100%;
+  color:var(--white);
+}
+
+.card-artigo .overlay span{
+  display:block;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+  opacity:.95;
+}
+
+.card-artigo .overlay h3{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  line-height:1.08;
+  max-width:90%;
+}
+
+.card-artigo .overlay h4{
+  font-family:'Playfair Display',serif;
+  font-size:25px;
+  line-height:1.18;
+}
+
+
+.destaque{
+  grid-column:span 2;
+  grid-row:span 2;
+  min-height:664px;
+}
+
+.destaque .overlay{
+  padding:34px;
+}
+
+.destaque .overlay span{
+  font-size:12px;
+  margin-bottom:14px;
+}
+
+.destaque .overlay h3{
+  font-size:56px;
+  max-width:80%;
+}
+
+
+.footer-premium{
+  background:#1e2a3a;
+  color:#fff;
+  padding:80px 7% 40px;
+  margin-top:90px;
+}
+
+.footer-top{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:50px;
+  margin-bottom:40px;
+}
+
+.footer-brand h2{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+.footer-brand p{
+  opacity:.82;
+  line-height:1.7;
+  max-width:320px;
+}
+
+.footer-links h4{
+  margin-bottom:15px;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+.footer-links a{
+  display:block;
+  text-decoration:none;
+  color:#d2d7de;
+  margin-bottom:10px;
+  font-size:14px;
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:20px;
+  font-size:13px;
+  opacity:.72;
+}
+
+
+.fade-up{
+  opacity:0;
+  transform:translateY(35px);
+  transition:all .8s ease;
+}
+
+.fade-up.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+@media(max-width:1100px){
+  .grid-artigos{
+    grid-template-columns:repeat(2, 1fr);
+  }
+
+  .destaque{
+    grid-column:span 2;
+    grid-row:span 1;
+    min-height:480px;
+  }
+
+  .destaque .overlay h3{
+    font-size:46px;
+    max-width:100%;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+
+
+@media(max-width:768px){
+  .header-dark{
+    padding:24px 5%;
+  }
+
+  .header-dark nav{
+    display:none;
+  }
+
+  .logo{
+    font-size:28px;
+  }
+
+  .artigos-hero{
+    min-height:56vh;
+    padding:120px 5% 50px;
+  }
+
+  .hero-text h1{
+    font-size:44px;
+  }
+
+  .hero-text p{
+    font-size:16px;
+    max-width:100%;
+  }
+
+  .artigos-container{
+    padding:70px 5%;
+  }
+
+  .filters{
+    gap:10px;
+    margin-bottom:30px;
+  }
+
+  .filter-btn{
+    padding:11px 18px;
+    font-size:13px;
+  }
+
+  .grid-artigos{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .card-artigo{
+    min-height:280px;
+    border-radius:20px;
+  }
+
+  .card-artigo .overlay{
+    padding:20px;
+  }
+
+  .card-artigo .overlay h4{
+    font-size:22px;
+  }
+
+  .destaque{
+    grid-column:span 1;
+    min-height:380px;
+  }
+
+  .destaque .overlay h3{
+    font-size:34px;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+}
+
+@media (min-width:1200px){
+
+  .artigos-container{
+    padding:70px 7%;
+  }
+
+  .grid-artigos{
+    grid-template-columns:1.15fr 1fr 1fr;
+    gap:22px;
+  }
+
+  .card-artigo{
+    min-height:260px;
+  }
+
+  .card-artigo.destaque{
+    grid-column:span 2;
+    grid-row:span 1;
+    min-height:430px;
+  }
+
+  .destaque .overlay h3{
+    font-size:44px;
+    max-width:90%;
+  }
+
+  .card-artigo .overlay h4{
+    font-size:24px;
+  }
+
+  .card-artigo img{
+    object-fit:cover;
+  }
+}
+.card-artigo.fade-up{
+  opacity:1;
+  transform:none;
+}
+:root{
+  --space:#25344F;
+  --slate:#617891;
+  --tan:#D5B893;
+  --coffee:#6F4D38;
+  --wine:#632024;
+  --light:#f7f5f1;
+  --white:#ffffff;
+  --line:#e8e2d9;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  overflow-x:hidden;
+  scrollbar-width:none;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--light);
+  color:var(--space);
+}
+
+body::-webkit-scrollbar{
+  display:none;
+}
+
+
+.header-dark{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  padding:28px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:20;
+}
+
+.header-dark nav{
+  display:flex;
+  gap:35px;
+}
+
+.header-dark nav a{
+  text-decoration:none;
+  color:var(--white);
+  font-size:14px;
+  letter-spacing:1px;
+  font-weight:500;
+  transition:.3s;
+}
+
+.header-dark nav a:hover{
+  opacity:.7;
+}
+
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  color:var(--white);
+  letter-spacing:2px;
+}
+
+/* HERO */
+
+.artigos-hero{
+  min-height:62vh;
+  display:flex;
+  align-items:flex-end;
+  padding:140px 7% 70px;
+  background:
+    linear-gradient(rgba(37,52,79,.72),rgba(37,52,79,.62)),
+    url('https://fornerialuce.com.br/media/magefan_blog/alimentacao-saudavel.jpg');
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-text{
+  max-width:720px;
+  color:var(--white);
+}
+
+.hero-text span{
+  display:block;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  opacity:.95;
+}
+
+.hero-text h1{
+  font-family:'Playfair Display',serif;
+  font-size:72px;
+  line-height:1.02;
+  margin-bottom:18px;
+}
+
+.hero-text p{
+  font-size:20px;
+  line-height:1.8;
+  max-width:620px;
+}
+
+
+.artigos-container{
+  padding:90px 7%;
+}
+
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-bottom:42px;
+}
+
+.filter-btn{
+  border:1px solid rgba(37,52,79,.12);
+  background:var(--white);
+  color:var(--space);
+  padding:13px 22px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.filter-btn:hover{
+  transform:translateY(-2px);
+  border-color:rgba(37,52,79,.25);
+}
+
+.filter-btn.active{
+  background:var(--space);
+  color:var(--white);
+  border-color:var(--space);
+}
+
+
+.grid-artigos{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+  align-items:stretch;
+}
+
+
+.card-artigo{
+  position:relative;
+  min-height:320px;
+  border-radius:24px;
+  overflow:hidden;
+  text-decoration:none;
+  display:flex;
+  align-items:flex-end;
+  background:var(--white);
+  box-shadow:0 12px 28px rgba(0,0,0,.06);
+  transition:.35s ease;
+}
+
+.card-artigo:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 36px rgba(0,0,0,.12);
+}
+
+.card-artigo img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card-artigo::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(12,18,30,.78), rgba(12,18,30,.16));
+  z-index:1;
+}
+
+.card-artigo .overlay{
+  position:relative;
+  z-index:2;
+  padding:24px;
+  width:100%;
+  color:var(--white);
+}
+
+.card-artigo .overlay span{
+  display:block;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+  opacity:.95;
+}
+
+.card-artigo .overlay h3{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  line-height:1.08;
+  max-width:90%;
+}
+
+.card-artigo .overlay h4{
+  font-family:'Playfair Display',serif;
+  font-size:25px;
+  line-height:1.18;
+}
+
+
+.destaque{
+  grid-column:span 2;
+  grid-row:span 2;
+  min-height:664px;
+}
+
+.destaque .overlay{
+  padding:34px;
+}
+
+.destaque .overlay span{
+  font-size:12px;
+  margin-bottom:14px;
+}
+
+.destaque .overlay h3{
+  font-size:56px;
+  max-width:80%;
+}
+
+
+.footer-premium{
+  background:#1e2a3a;
+  color:#fff;
+  padding:80px 7% 40px;
+  margin-top:90px;
+}
+
+.footer-top{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:50px;
+  margin-bottom:40px;
+}
+
+.footer-brand h2{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+.footer-brand p{
+  opacity:.82;
+  line-height:1.7;
+  max-width:320px;
+}
+
+.footer-links h4{
+  margin-bottom:15px;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+.footer-links a{
+  display:block;
+  text-decoration:none;
+  color:#d2d7de;
+  margin-bottom:10px;
+  font-size:14px;
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:20px;
+  font-size:13px;
+  opacity:.72;
+}
+
+
+.fade-up{
+  opacity:0;
+  transform:translateY(35px);
+  transition:all .8s ease;
+}
+
+.fade-up.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+@media(max-width:1100px){
+  .grid-artigos{
+    grid-template-columns:repeat(2, 1fr);
+  }
+
+  .destaque{
+    grid-column:span 2;
+    grid-row:span 1;
+    min-height:480px;
+  }
+
+  .destaque .overlay h3{
+    font-size:46px;
+    max-width:100%;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+
+
+@media(max-width:768px){
+  .header-dark{
+    padding:24px 5%;
+  }
+
+  .header-dark nav{
+    display:none;
+  }
+
+  .logo{
+    font-size:28px;
+  }
+
+  .artigos-hero{
+    min-height:56vh;
+    padding:120px 5% 50px;
+  }
+
+  .hero-text h1{
+    font-size:44px;
+  }
+
+  .hero-text p{
+    font-size:16px;
+    max-width:100%;
+  }
+
+  .artigos-container{
+    padding:70px 5%;
+  }
+
+  .filters{
+    gap:10px;
+    margin-bottom:30px;
+  }
+
+  .filter-btn{
+    padding:11px 18px;
+    font-size:13px;
+  }
+
+  .grid-artigos{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .card-artigo{
+    min-height:280px;
+    border-radius:20px;
+  }
+
+  .card-artigo .overlay{
+    padding:20px;
+  }
+
+  .card-artigo .overlay h4{
+    font-size:22px;
+  }
+
+  .destaque{
+    grid-column:span 1;
+    min-height:380px;
+  }
+
+  .destaque .overlay h3{
+    font-size:34px;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+}
+
+@media (min-width:1200px){
+
+  .artigos-container{
+    padding:70px 7%;
+  }
+
+  .grid-artigos{
+    grid-template-columns:1.15fr 1fr 1fr;
+    gap:22px;
+  }
+
+  .card-artigo{
+    min-height:260px;
+  }
+
+  .card-artigo.destaque{
+    grid-column:span 2;
+    grid-row:span 1;
+    min-height:430px;
+  }
+
+  .destaque .overlay h3{
+    font-size:44px;
+    max-width:90%;
+  }
+
+  .card-artigo .overlay h4{
+    font-size:24px;
+  }
+
+  .card-artigo img{
+    object-fit:cover;
+  }
+}
+.card-artigo.fade-up{
+  opacity:1;
+  transform:none;
+}

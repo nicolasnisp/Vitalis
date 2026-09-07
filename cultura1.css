@@ -1,0 +1,923 @@
+:root{
+  --space:#25344F;
+  --slate:#617891;
+  --tan:#D5B893;
+  --coffee:#6F4D38;
+  --wine:#632024;
+  --light:#f7f5f1;
+  --white:#ffffff;
+  --line:#e8e2d9;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  overflow-x:hidden;
+  scrollbar-width:none;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--light);
+  color:var(--space);
+}
+
+body::-webkit-scrollbar{
+  display:none;
+}
+
+/* HEADER */
+
+.site-header{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  padding:28px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:20;
+}
+
+.header-nav{
+  display:flex;
+  gap:35px;
+}
+
+.header-nav a{
+  text-decoration:none;
+  color:var(--white);
+  font-size:14px;
+  letter-spacing:1px;
+  font-weight:500;
+  transition:.3s;
+}
+
+.header-nav a:hover{
+  opacity:.7;
+}
+
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  color:var(--white);
+  letter-spacing:2px;
+}
+
+/* HERO */
+
+.article-hero{
+  position:relative;
+  min-height:82vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:150px 7% 90px;
+  background-image:url('https://images.unsplash.com/photo-1604881991720-f91add269bed?auto=format&fit=crop&w=1800&q=80');
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(15,18,28,.82),
+    rgba(22,28,42,.58),
+    rgba(15,18,28,.78)
+  );
+}
+
+.article-hero-content{
+  position:relative;
+  z-index:2;
+  color:var(--white);
+  max-width:900px;
+}
+
+.hero-eyebrow{
+  display:block;
+  font-size:13px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  opacity:.95;
+}
+
+.article-hero-content h1{
+  font-family:'Playfair Display',serif;
+  font-size:72px;
+  line-height:1.04;
+  margin-bottom:18px;
+}
+
+.article-hero-content p{
+  font-size:21px;
+  line-height:1.7;
+  max-width:720px;
+  margin:0 auto 24px;
+}
+
+.article-meta-top{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  font-size:14px;
+  opacity:.92;
+}
+
+/* MAIN */
+
+.article-main{
+  padding:90px 7%;
+}
+
+.article-layout{
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:70px;
+  align-items:start;
+}
+
+/* SIDE */
+
+.article-side{
+  position:sticky;
+  top:120px;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.meta-card,
+.alert-card{
+  background:var(--white);
+  border:1px solid rgba(37,52,79,.08);
+  border-radius:22px;
+  padding:26px 24px;
+  box-shadow:0 10px 24px rgba(0,0,0,.04);
+}
+
+.alert-card{
+  background:#fff7f7;
+  border-color:rgba(99,32,36,.16);
+}
+
+.meta-label{
+  display:block;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  color:var(--wine);
+  margin-bottom:8px;
+}
+
+.meta-card p,
+.alert-card p{
+  font-size:16px;
+  line-height:1.7;
+  color:var(--slate);
+  margin-bottom:18px;
+}
+
+.meta-card p:last-child,
+.alert-card p:last-child{
+  margin-bottom:0;
+}
+
+/* CONTENT */
+
+.article-content{
+  max-width:840px;
+}
+
+.intro-box{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:34px 0;
+  margin-bottom:46px;
+}
+
+.intro-box p{
+  font-family:'Playfair Display',serif;
+  font-size:31px;
+  line-height:1.45;
+  color:var(--space);
+}
+
+.article-block{
+  margin-bottom:54px;
+}
+
+.article-block h2{
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  line-height:1.1;
+  margin-bottom:18px;
+  color:var(--space);
+}
+
+.article-block p{
+  font-size:18px;
+  line-height:1.95;
+  color:var(--slate);
+  margin-bottom:16px;
+}
+
+.article-block ul{
+  padding-left:22px;
+  margin:12px 0 18px;
+}
+
+.article-block li{
+  font-size:18px;
+  line-height:1.9;
+  color:var(--slate);
+  margin-bottom:10px;
+}
+
+.article-block strong{
+  color:var(--space);
+}
+
+/* IMAGE */
+
+.article-image{
+  margin:0 0 54px;
+}
+
+.article-image img{
+  width:100%;
+  height:520px;
+  object-fit:cover;
+  border-radius:24px;
+  display:block;
+}
+
+.article-image figcaption{
+  margin-top:14px;
+  font-size:14px;
+  color:var(--slate);
+}
+
+
+
+.article-quote{
+  margin:0 0 54px;
+  padding:32px 34px;
+  border-left:5px solid var(--wine);
+  background:var(--white);
+  border-radius:20px;
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  line-height:1.45;
+  color:var(--space);
+  box-shadow:0 12px 28px rgba(0,0,0,.04);
+}
+
+.highlight-service{
+  background:var(--white);
+  border:1px solid rgba(37,52,79,.08);
+  border-left:6px solid var(--wine);
+  border-radius:22px;
+  padding:30px 28px;
+  box-shadow:0 12px 28px rgba(0,0,0,.04);
+}
+
+/* RELATED */
+
+.related-section{
+  margin-top:70px;
+}
+
+.related-head{
+  margin-bottom:28px;
+}
+
+.related-head h2{
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+}
+
+.related-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+}
+
+.related-card{
+  text-decoration:none;
+  color:inherit;
+  background:var(--white);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 12px 28px rgba(0,0,0,.05);
+  transition:.35s ease;
+}
+
+.related-card:hover{
+  transform:translateY(-6px);
+}
+
+.related-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+
+.related-content{
+  padding:22px;
+}
+
+.related-content span{
+  display:block;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  color:var(--coffee);
+  margin-bottom:8px;
+}
+
+.related-content h3{
+  font-family:'Playfair Display',serif;
+  font-size:24px;
+  line-height:1.25;
+  color:var(--space);
+}
+
+
+
+.footer-premium{
+  background:#1e2a3a;
+  color:#fff;
+  padding:80px 7% 40px;
+  margin-top:90px;
+}
+
+.footer-top{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:50px;
+  margin-bottom:40px;
+}
+
+.footer-brand h2{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+.footer-brand p{
+  opacity:.8;
+  line-height:1.6;
+  max-width:300px;
+}
+
+.footer-links h4{
+  margin-bottom:15px;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+.footer-links a{
+  display:block;
+  text-decoration:none;
+  color:#ccc;
+  margin-bottom:10px;
+  font-size:14px;
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:20px;
+  font-size:13px;
+  opacity:.7;
+}
+
+
+
+.fade-up{
+  opacity:0;
+  transform:translateY(35px);
+  transition:all .8s ease;
+}
+
+.fade-up.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+
+@media(max-width:1024px){
+  .article-layout{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .article-side{
+    position:static;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .article-hero-content h1{
+    font-size:56px;
+  }
+
+  .related-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+
+
+@media(max-width:768px){
+  .site-header{
+    padding:24px 5%;
+  }
+
+  .header-nav{
+    display:none;
+  }
+
+  .logo{
+    font-size:28px;
+  }
+
+  .article-hero{
+    min-height:70vh;
+    padding:120px 5% 70px;
+  }
+
+  .article-hero-content h1{
+    font-size:40px;
+  }
+
+  .article-hero-content p{
+    font-size:16px;
+    line-height:1.7;
+  }
+
+  .article-meta-top{
+    font-size:13px;
+    gap:8px;
+  }
+
+  .article-main{
+    padding:70px 5%;
+  }
+
+  .article-side{
+    grid-template-columns:1fr;
+  }
+
+  .intro-box p{
+    font-size:24px;
+  }
+
+  .article-block h2,
+  .related-head h2{
+    font-size:32px;
+  }
+
+  .article-block p,
+  .article-block li{
+    font-size:16px;
+  }
+
+  .article-image img{
+    height:300px;
+  }
+
+  .article-quote{
+    font-size:25px;
+    padding:24px;
+  }
+
+  .related-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+}
+
+.hero-carnaval{
+  background:
+  linear-gradient(rgba(37,52,79,.65), rgba(37,52,79,.65)),
+  url('https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?auto=format&fit=crop&w=1600&q=80');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-bemestar-carnaval{
+  background:
+  linear-gradient(rgba(37,52,79,.65), rgba(37,52,79,.65)),
+  url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1600&q=80');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-contraceptivos{
+  background:
+
+url('https://drapriscilamatsuoka.com.br/wp-content/uploads/2018/12/metodos-contraceptivos-para-evitar-gravidez.jpg');
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-ginecologia{
+  background:
+  linear-gradient(rgba(255, 255, 255, 0.78),rgba(0, 0, 0, 0.78)),
+  url('https://cedarn.com.br/wp-content/uploads/2023/06/women-s-health-women-s-healthcare-concept-with-uterus-1024x683.jpg');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-alimentacao{
+  background:
+  linear-gradient(rgba(37,52,79,.72),rgba(37,52,79,.72)),
+  url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1600&q=80');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-saude-mental{
+  background:
+  linear-gradient(rgba(37,52,79,.72),rgba(37,52,79,.72)),
+  url('https://i0.wp.com/proepi.org.br/wp-content/uploads/2024/01/2024_01_10_sinais_saude_mental_cuidado_banner_site.jpg?fit=1920%2C1080&ssl=1');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-aparencia{
+  background:
+  linear-gradient(rgba(37,52,79,.72),rgba(0, 0, 0, 0)),
+  url('https://i0.statig.com.br/bancodeimagens/7l/h8/5b/7lh85bamxch50u98azf1vuyh2.jpg');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-show-jorge{
+  background:
+  linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)),
+  url('https://www.santos.sp.gov.br/static/files_www/styles/newspagemodal/public/field/image/francisco_arrais_6394.jpg');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-revelando-sp{
+  background:
+  linear-gradient(rgba(37,52,79,.72),rgba(37,52,79,.72)),
+  url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1600&q=80');
+
+  background-size:cover;
+  background-position:center;
+}
+.eventos-hero{
+  background:
+  linear-gradient(rgba(37,52,79,.75),rgba(37,52,79,.75)),
+  url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1800&q=80');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-dia-criancas{
+  background:
+  linear-gradient(rgba(37,52,79,.72),rgba(37,52,79,.72)),
+  url('https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1600&q=80');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-outubro{
+  background:
+ 
+  url('https://sinasefe.org.br/site/wp-content/uploads/sites/3/2023/10/outubroRosa2023.jpg');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-coracao{
+  background:
+  linear-gradient(rgba(37,52,79,.72),rgba(37,52,79,.72)),
+  url('https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?auto=format&fit=crop&w=1600&q=80');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-novembro{
+  background:
+  linear-gradient(rgba(37,52,79,.72),rgba(37,52,79,.72)),
+  url('https://ceonc.com.br/wp-content/uploads/2025/11/11.11.2019_Novembro_azul.jpg');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-janeiro-branco{
+  background:
+  linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)),
+  url('https://www12.senado.leg.br/radio/1/noticia/2024/01/03/janeiro-branco-e-o-mes-da-conscientizacao-sobre-a-saude-mental/@@images/001ef216-3f5b-4f4b-929e-8146167f60a2.jpeg');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-saude-materna{
+  background:
+  linear-gradient(rgba(37,52,79,.72),rgba(37,52,79,.72)),
+  url('https://shalomtreinamentos.com.br/wp-content/uploads/2024/05/obstetricia-1024x683-1.jpg');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-dignidade-menstrual{
+  background:
+  linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)),
+  url('https://www.pragmatismopolitico.com.br/wp-content/uploads/2021/09/governo-da-paraiba-sanciona-lei-programa-dignidade-menstrual1.jpg');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-pascoa{
+  background:
+  linear-gradient(rgba(37,52,79,.72),rgba(37,52,79,.72)),
+  url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1600&q=80');
+
+  background-size:cover;
+  background-position:center;
+}
+.hero-vicaricidio{
+  background:
+  linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)),
+  url('https://conteudo.imguol.com.br/c/noticias/ac/2026/03/26/violencia-contra-crianca-1774526102424_v2_900x506.jpg');
+
+  background-size:cover;
+  background-position:center;
+}
+
+
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+}
+
+@media(max-width:1100px){
+
+  .article-hero{
+    min-height:72vh;
+    padding:130px 6% 80px;
+  }
+
+  .article-hero-content h1{
+    font-size:56px;
+  }
+
+  .article-hero-content p{
+    font-size:18px;
+  }
+
+  .article-layout{
+    grid-template-columns:1fr;
+    gap:44px;
+  }
+
+  .article-side{
+    position:static;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+
+  .article-content{
+    max-width:100%;
+  }
+
+  .article-image img{
+    height:430px;
+  }
+
+  .related-grid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+
+  .footer-top{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* CELULAR */
+@media(max-width:768px){
+
+  .site-header{
+    padding:22px 5%;
+    justify-content:center;
+  }
+
+  .header-nav{
+    display:none;
+  }
+
+  .logo{
+    font-size:30px;
+  }
+
+  .article-hero{
+    min-height:64vh;
+    padding:110px 5% 60px;
+  }
+
+  .article-hero-content{
+    max-width:100%;
+  }
+
+  .article-hero-content h1{
+    font-size:38px;
+    line-height:1.08;
+  }
+
+  .article-hero-content p{
+    font-size:16px;
+    line-height:1.6;
+  }
+
+  .article-meta-top{
+    font-size:12px;
+    gap:7px;
+  }
+
+  .article-main{
+    padding:60px 5%;
+  }
+
+  .article-side{
+    grid-template-columns:1fr;
+  }
+
+  .meta-card,
+  .alert-card{
+    padding:22px 20px;
+    border-radius:18px;
+  }
+
+  .intro-box{
+    padding:28px 0;
+    margin-bottom:38px;
+  }
+
+  .intro-box p{
+    font-size:23px;
+    line-height:1.45;
+  }
+
+  .article-block{
+    margin-bottom:44px;
+  }
+
+  .article-block h2{
+    font-size:31px;
+    line-height:1.12;
+  }
+
+  .article-block p,
+  .article-block li{
+    font-size:16px;
+    line-height:1.85;
+  }
+
+  .article-image img{
+    height:280px;
+    border-radius:18px;
+  }
+
+  .article-quote{
+    font-size:24px;
+    padding:24px 22px;
+    border-radius:18px;
+  }
+
+  .highlight-service{
+    padding:24px 22px;
+  }
+
+  .related-head h2{
+    font-size:32px;
+  }
+
+  .related-grid{
+    grid-template-columns:1fr;
+  }
+
+  .related-card img{
+    height:210px;
+  }
+
+  .footer-premium{
+    padding:60px 5% 35px;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+}
+
+
+@media(max-width:420px){
+
+  .article-hero{
+    min-height:60vh;
+    padding:100px 5% 50px;
+  }
+
+  .article-hero-content h1{
+    font-size:33px;
+  }
+
+  .article-hero-content p{
+    font-size:15px;
+  }
+
+  .intro-box p{
+    font-size:21px;
+  }
+
+  .article-block h2{
+    font-size:28px;
+  }
+
+  .article-image img{
+    height:240px;
+  }
+
+  .article-quote{
+    font-size:21px;
+  }
+}
+
+
+@media(min-width:1400px){
+
+  .article-hero{
+    min-height:76vh;
+    max-height:820px;
+  }
+
+  .article-hero-content h1{
+    font-size:66px;
+  }
+
+  .article-main{
+    padding:80px 8%;
+  }
+
+  .article-layout{
+    grid-template-columns:260px minmax(0, 820px);
+    justify-content:center;
+    gap:64px;
+  }
+
+  .article-image img{
+    height:460px;
+  }
+
+  .article-block h2{
+    font-size:40px;
+  }
+
+  .intro-box p{
+    font-size:29px;
+  }
+
+  .article-quote{
+    font-size:31px;
+  }
+}
